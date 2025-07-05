@@ -47,3 +47,12 @@ Built with 💙 for awareness, healing, and self-care.
 ```bash
 git clone https://github.com/Deshwalvanshika/safe-space-mental-health-app.git
 cd safe-space-mental-health-app
+
+# Frontend
+cd client
+npm install
+
+# Backend
+cd ../server
+npm install
+
