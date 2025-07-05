@@ -56,3 +56,26 @@ npm install
 cd ../server
 npm install
 
+---
+
+### 2. Set Up Environment Variables
+
+#### 🔐 For Backend (`/server/.env`)
+Create a `.env` file in the `/server` folder with:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+GROQ_API_KEY=your_groq_api_key
+
+---
+
+### 4. 🚀 Run the App Locally
+
+```bash
+# ▶️ Start the backend server
+cd server
+node index.js
+
+# ▶️ In a separate terminal/tab, start the React frontend
+cd client
+npm start
