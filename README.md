@@ -1,6 +1,6 @@
-# 🧠 SafeSpace – Your Mental Health Journal & AI Chat Companion
+# 🧠 SafeSpace –Your Private Wellness Journal & Chat Companion
 
-SafeSpace is a web application designed to help users track their mental well-being through a mood-based journal and get emotional support from a friendly AI-powered chatbot.
+**SafeSpace** is a web application that empowers users to track their emotional well-being through mood-based journaling and receive empathetic support from an AI-powered chatbot.
 
 Built with 💙 for awareness, healing, and self-care.
 
@@ -9,33 +9,40 @@ Built with 💙 for awareness, healing, and self-care.
 ## 🌟 Features
 
 - 📓 **Mood-based Journal**  
-  Log your feelings with mood emojis and written thoughts.
+  Log your feelings with mood emojis and written reflections.
 
 - 🤖 **AI Chatbot Support**  
-  Chat with a friendly companion powered by OpenAI's GPT to get emotional support, suggestions, or simply vent.
+  Chat with a kind, supportive GPT-based AI assistant.
 
-- 📅 **Track Entries**  
-  View and reflect on your previous journal logs.
+- 📅 **View Past Entries**  
+  Track and reflect on your mental health journey.
 
-- 🎨 **Clean & Responsive UI**  
-  Fully responsive layout with mood-based visual cues, emojis, and soothing design.
+- 🌗 **Dark Mode Toggle**  
+  Switch between light and dark themes for comfort.
+
+- 🔐 **User Authentication**  
+  Login/Signup using Firebase – keep your data secure and private.
+
+- 🗑️ **Delete Journal Entries**  
+  Easily remove old entries with one click.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer       | Technology              |
-|-------------|--------------------------|
-| **Frontend**| React.js, Axios, CSS     |
-| **Backend** | Node.js, Express.js      |
-| **Database**| MongoDB Atlas (Mongoose) |
-| **APIs**    | OpenAI GPT               |
+| Layer        | Technology                        |
+|--------------|------------------------------------|
+| **Frontend** | React.js, Axios, CSS               |
+| **Backend**  | Node.js, Express.js                |
+| **Database** | MongoDB Atlas (via Mongoose)       |
+| **Auth**     | Firebase Authentication            |
+| **AI Model** | Groq API with LLaMA-3              |
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repo
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Deshwalvanshika/safe-space-mental-health-app.git
