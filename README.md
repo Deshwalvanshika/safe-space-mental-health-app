@@ -48,6 +48,39 @@ Built with 💙 for awareness, healing, and self-care.
 - **`server/`** – Contains the Express backend with API routes, MongoDB models, and environment config.
 ## 🚀 Installation & Setup
 
-<pre> ## 🚀 Installation & Setup 1. **Clone the repository:** ```bash git clone https://github.com/Deshwalvanshika/safe-space-mental-health-app.git cd safe-space-mental-health-app ``` 2. **Install dependencies for the frontend (React app):** ```bash cd client npm install ``` 3. **Install dependencies for the backend (Express server):** ```bash cd ../server npm install ``` 4. **Set up environment variables:** - Create a `.env` file inside the `server/` directory. - Add the following: ``` MONGO_URI=your_mongodb_uri GROQ_API_KEY=your_groq_api_key ``` - Create a `.env` file inside the `client/` directory for Firebase config if needed. 5. **Run the frontend app:** ```bash cd ../client npm start ``` 6. **Run the backend server:** ```bash cd ../server node index.js ``` </pre>
+## Installation & Setup
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Deshwalvanshika/safe-space-mental-health-app.git
+   cd safe-space-mental-health-app
+   ```
+2. **Install dependencies for the frontend (React app):**
+   ```bash
+   cd client
+   npm install
+   ```
+3. **Install dependencies for the backend (Express server):**
+   ```bash
+   cd ../server
+   npm install
+   ```
+4. **Set up environment variables:**
+   - Create a `.env` file inside the `server/` directory. - Add the following:
+     ```
+     MONGO_URI=your_mongodb_uri GROQ_API_KEY=your_groq_api_key
+     ```
+   - Create a `.env` file inside the `client/` directory for Firebase config if needed.
+5. **Run the frontend app:**
+   ```bash
+   cd ../client
+   npm start
+   ```
+6. **Run the backend server:**
+   ```bash
+   cd ../server
+   node index.js
+   ```
+
+   
 
 
