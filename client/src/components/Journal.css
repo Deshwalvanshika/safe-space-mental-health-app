@@ -1,49 +1,90 @@
-/* Journal.css */
+/* ========== JOURNAL STYLES ========== */
 .container {
-  width: 400px;
-  background-color: #ffffff;
-  border: 2px solid #ddd;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  text-align: left;
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: var(--card-bg);
+  color: var(--text);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--secondary);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .container h2 {
   margin-bottom: 20px;
-  font-size: 1.5rem;
-  color: #34495e;
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--text);
 }
 
+/* Labels */
+.container label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+/* Inputs, Select, Textarea */
 .container select,
-.container textarea,
+.container textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: var(--card-bg);
+  color: var(--text);
+  box-sizing: border-box;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.container textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Button */
 .container button {
   width: 100%;
-  margin-top: 10px;
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-.container button {
-  background-color: #4caf50;
+  background-color: var(--primary);
   color: white;
   border: none;
+  border-radius: 10px;
   cursor: pointer;
+  font-weight: bold;
   transition: background-color 0.2s ease;
 }
 
 .container button:hover {
-  background-color: #45a049;
+  background-color: var(--secondary);
 }
 
-.status-message {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: #2c3e50;
-}
+/* Mood emoji visual */
 .mood-visual {
   text-align: center;
+  margin: 15px 0;
+}
+
+/* Status message */
+.status-message {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+/* Dark mode scrollbar (optional) */
+body[data-theme="dark"] .container textarea::-webkit-scrollbar {
+  width: 10px;
+}
+body[data-theme="dark"] .container textarea::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 10px;
 }

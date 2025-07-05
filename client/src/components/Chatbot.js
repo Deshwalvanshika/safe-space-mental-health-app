@@ -1,55 +1,67 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import axios from "axios";
 import "./Chatbot.css";
 
 const Chatbot = () => {
-  const [messages, setMessages] = useState([
-    { sender: "bot", text: "Hi there! How are you feeling today? 😊" },
-  ]);
-  const [input, setInput] = useState("");
+  const [message, setMessage] = useState("");
+  const [chatLog, setChatLog] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const chatEndRef = useRef(null);
 
-  const handleSend = () => {
-    if (!input.trim()) return;
+  const handleSend = async () => {
+    if (!message.trim()) return;
 
-    // Add user message
-    const newMessages = [...messages, { sender: "user", text: input }];
-    setMessages(newMessages);
+    const userMessage = { sender: "user", text: message };
+    setChatLog((prev) => [...prev, userMessage]);
+    setMessage("");
+    setLoading(true);
 
-    // Simulate bot response
-    setTimeout(() => {
-      const botResponse = getBotResponse(input);
-      setMessages([...newMessages, { sender: "bot", text: botResponse }]);
-    }, 700);
-
-    setInput("");
+    try {
+      const res = await axios.post("http://localhost:8000/chat", { message });
+      const botMessage = { sender: "bot", text: res.data.reply };
+      setChatLog((prev) => [...prev, botMessage]);
+    } catch (err) {
+      setChatLog((prev) => [
+        ...prev,
+        { sender: "bot", text: "Sorry, something went wrong." },
+      ]);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const getBotResponse = (input) => {
-    const msg = input.toLowerCase();
-    if (msg.includes("sad"))
-      return "I'm sorry you're feeling sad. Want to talk about it?";
-    if (msg.includes("happy"))
-      return "That's wonderful! What made you feel happy today?";
-    if (msg.includes("anxious"))
-      return "It’s okay to feel anxious. Try breathing slowly.";
-    return "I'm here for you. Tell me more. 💜";
-  };
+  // ✅ Auto-scroll chat window
+  useEffect(() => {
+    if (chatEndRef.current) {
+      chatEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [chatLog]);
 
   return (
     <div className="chatbot-container">
-      <h2>💬 Support Chat</h2>
+      <div className="chatbot-header">🧠 Mental Health Chatbot</div>
+
       <div className="chat-window">
-        {messages.map((msg, index) => (
-          <div key={index} className={`chat-bubble ${msg.sender}`}>
+        {chatLog.map((msg, idx) => (
+          <div
+            key={idx}
+            className={msg.sender === "user" ? "user-msg" : "bot-msg"}
+          >
             {msg.text}
           </div>
         ))}
+        {/* ✅ Scroll target */}
+        <div ref={chatEndRef} />
       </div>
-      <div className="chat-input-area">
+
+      {loading && <p className="status-message">Thinking...</p>}
+
+      <div className="chat-input">
         <input
           type="text"
-          placeholder="Type how you feel..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
+          placeholder="Type a message..."
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSend()}
         />
         <button onClick={handleSend}>Send</button>
