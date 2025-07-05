@@ -1,4 +1,4 @@
-# 🧠 SafeSpace –Your Private Wellness Journal & Chat Companion
+# 🧠 SafeSpace – Your Private Wellness Journal & Chat Companion
 
 **SafeSpace** is a web application that empowers users to track their emotional well-being through mood-based journaling and receive empathetic support from an AI-powered chatbot.
 
@@ -47,7 +47,6 @@ Built with 💙 for awareness, healing, and self-care.
 ```bash
 git clone https://github.com/Deshwalvanshika/safe-space-mental-health-app.git
 cd safe-space-mental-health-app
-
 # Frontend
 cd client
 npm install
@@ -55,27 +54,12 @@ npm install
 # Backend
 cd ../server
 npm install
-
----
-
-### 2. Set Up Environment Variables
-
-#### 🔐 For Backend (`/server/.env`)
-Create a `.env` file in the `/server` folder with:
-
-```env
 MONGO_URI=your_mongodb_connection_string
 GROQ_API_KEY=your_groq_api_key
-
----
-
-### 4. 🚀 Run the App Locally
-
-```bash
 # ▶️ Start the backend server
 cd server
 node index.js
-
-# ▶️ In a separate terminal/tab, start the React frontend
+# ▶️ In a separate terminal/tab, start the frontend
 cd client
 npm start
+
