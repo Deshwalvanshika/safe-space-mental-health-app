@@ -77,7 +77,9 @@ Built with 💙 for awareness, healing, and self-care.
    cd ../server
    node index.js
    ```
-
+## Contact
+For any inquiries or feedback, feel free to reach out:
+- [Vanshika](https://www.linkedin.com/in/vanshika-116616273/)
    
 
 
