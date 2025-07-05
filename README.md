@@ -42,24 +42,12 @@ Built with 💙 for awareness, healing, and self-care.
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
+## 📁 Folder Structure
 
-```bash
-git clone https://github.com/Deshwalvanshika/safe-space-mental-health-app.git
-cd safe-space-mental-health-app
-# Frontend
-cd client
-npm install
+- **`client/`** – Contains the React frontend with components, styling, and routing logic.
+- **`server/`** – Contains the Express backend with API routes, MongoDB models, and environment config.
+## 🚀 Installation & Setup
 
-# Backend
-cd ../server
-npm install
-MONGO_URI=your_mongodb_connection_string
-GROQ_API_KEY=your_groq_api_key
-# ▶️ Start the backend server
-cd server
-node index.js
-# ▶️ In a separate terminal/tab, start the frontend
-cd client
-npm start
+<pre> ## 🚀 Installation & Setup 1. **Clone the repository:** ```bash git clone https://github.com/Deshwalvanshika/safe-space-mental-health-app.git cd safe-space-mental-health-app ``` 2. **Install dependencies for the frontend (React app):** ```bash cd client npm install ``` 3. **Install dependencies for the backend (Express server):** ```bash cd ../server npm install ``` 4. **Set up environment variables:** - Create a `.env` file inside the `server/` directory. - Add the following: ``` MONGO_URI=your_mongodb_uri GROQ_API_KEY=your_groq_api_key ``` - Create a `.env` file inside the `client/` directory for Firebase config if needed. 5. **Run the frontend app:** ```bash cd ../client npm start ``` 6. **Run the backend server:** ```bash cd ../server node index.js ``` </pre>
+
 
