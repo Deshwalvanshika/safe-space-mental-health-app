@@ -65,10 +65,7 @@ Built with 💙 for awareness, healing, and self-care.
    npm install
    ```
 4. **Set up environment variables:**
-   - Create a `.env` file inside the `server/` directory. - Add the following:
-     ```
-     MONGO_URI=your_mongodb_uri GROQ_API_KEY=your_groq_api_key
-     ```
+   - Create a `.env` file inside the `server/` directory.
    - Create a `.env` file inside the `client/` directory for Firebase config if needed.
 5. **Run the frontend app:**
    ```bash
