@@ -1,12 +1,11 @@
 const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
-const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const Journal = require("./models/Journal");
-
-// Load environment variables
-dotenv.config();
+// Load environment variables correctly
+const dotenv = require("dotenv");
+dotenv.config({ path: __dirname + "/.env" }); // ✅ this ensures the correct path
 
 // Setup express app
 const app = express();

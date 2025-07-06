@@ -1,5 +1,5 @@
 import { getAuth } from "firebase/auth";
-import app from "./firebase"; // make sure this is the correct path
+import app from "./firebase";
 
 const auth = getAuth(app);
 
